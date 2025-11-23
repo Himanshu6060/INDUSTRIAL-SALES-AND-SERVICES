@@ -1,0 +1,168 @@
+/* ================================
+   Contact Section Background
+================================= */
+.contact-section {
+  width: 100%;
+  background: #0a3d62; /* blue background */
+  padding: 60px 20px;
+  color: #fff;
+}
+
+/* ================================
+   Main Container
+================================= */
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ================================
+   Left Section (Contact Details)
+================================= */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+/* ================================
+   Inquiry Form Box
+================================= */
+.inquiry-form {
+  flex: 1;
+  min-width: 320px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.inquiry-form h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================================
+   Form Rows
+================================= */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.full-width textarea {
+  width: 100%;
+}
+
+/* ================================
+   Buttons
+================================= */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.submit-btn,
+.reset-btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #042b8eff;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background: #163d73;
+}
+
+.reset-btn {
+  background: #ccc;
+  color: #000;
+  padding: 6px 14px; /* smaller size */
+}
+
+.reset-btn:hover {
+  background: #b5b5b5;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 850px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-info h2 {
+    text-align: center;
+  }
+
+  .inquiry-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .submit-btn, .reset-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}

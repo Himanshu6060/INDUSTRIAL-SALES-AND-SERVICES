@@ -1,0 +1,55 @@
+.live-map-section {
+  text-align: center;
+  background-color: #f4f7fb;
+  padding: 50px 20px;
+}
+
+.live-map-section h2 {
+  font-size: 1.8rem;
+  color: #042b8eff;
+  margin-bottom: 20px;
+}
+
+.map-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-actions {
+  margin-top: 20px;
+}
+
+.map-btn {
+  background-color: #042b8eff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.map-btn:hover {
+  background-color: #4d6485ff;
+}
+
+@media (max-width: 768px) {
+  .live-map-section h2 {
+    font-size: 1.4rem;
+  }
+  .map-wrapper {
+    width: 100%;
+  }
+}
+ 
+.leaflet-control-container .leaflet-top.leaflet-left { 
+  z-index:999;
+}
+
+ 
