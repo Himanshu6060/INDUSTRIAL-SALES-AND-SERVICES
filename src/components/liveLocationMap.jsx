@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "./liveLocationMap.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Fix default Leaflet marker icon issue
 delete L.Icon.Default.prototype._getIconUrl;
@@ -35,6 +37,10 @@ function LiveLocationMap() {
     }
   }, []);
 
+  useEffect(()=>{
+    AOS.init({duration:"1500"})
+  },[])
+
   // 🔗 Share location function
   const handleShareLocation = () => {
     const [lat, lng] = position;
@@ -62,7 +68,7 @@ function LiveLocationMap() {
 
   return (
     <section className="live-map-section">
-      <div className="map-wrapper">
+      <div className="map-wrapper" data-aos="zoom-out">
         <MapContainer
           center={position}
           zoom={13}

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./hero.css";
 
 function Hero() {
@@ -20,16 +22,19 @@ function Hero() {
     return () => clearInterval(interval);
   }, [images.length]);
 
+   useEffect(()=>{
+      AOS.init({duration: 1000});
+   },[]);
   return (
     <section
       className="hero"
       id="home"
       style={{ backgroundImage: `url(${images[currentImage]})` }}
     >
-      <div className="hero-content">
-        <h4>Two Leading Italian Companies, <br />
+      <div className="hero-content" > 
+        <h4 data-aos="fade-up">Two Leading Italian Companies, <br />
         one special alliance for the Indian market.</h4>
-        <a href="#products"><button className="hero-btn">Discover the Product</button></a>
+        <a href="#products"><button className="hero-btn" data-aos="fade-up" data-aos-duration="3000">Discover the Product</button></a>
       </div>
     </section>
   );

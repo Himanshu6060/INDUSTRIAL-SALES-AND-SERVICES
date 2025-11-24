@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./product.css";
 
 const products = [
@@ -46,10 +48,14 @@ const Products = () => {
     setSelectedProduct(null);
   };
 
+  useEffect(()=>{
+    AOS.init({duration: 1500})
+  },[])
+
   return (
     <section id="products" className="products-section">
-      <h2 className="products-heading">Products</h2>
-      <p className="products-intro">
+      <h2 className="products-heading" data-aos="zoom-out">Products</h2>
+      <p className="products-intro" data-aos="zoom-out">
         Our in-depth knowledge of the needs of machine builders has enabled us
         to offer the Indian market a wide range of motors, gearmotors and
         gearboxes for all industries.
@@ -58,7 +64,7 @@ const Products = () => {
       {/* Product Cards */}
       <div className="products-container">
         {products.map((product) => (
-          <div className="product-card" key={product.id}>
+          <div data-aos="zoom-out" className="product-card" key={product.id}>
             <div className="product-top">
               <img
                 src={product.image}

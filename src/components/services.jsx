@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import "./services.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ComplaintForm = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +23,9 @@ const ComplaintForm = () => {
     subject: "",
     files: [],
   });
+  useEffect(()=>{
+    AOS.init({duration:1500})
+  },[])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -95,13 +100,13 @@ const ComplaintForm = () => {
 
   return (
     <section id="services" className="complaint-section">
-      <h2 className="complaint-heading">Customer Complaint Form</h2>
-      <p className="complaint-intro">
+      <h2 className="complaint-heading" data-aos="zoom-out">Customer Complaint Form</h2>
+      <p className="complaint-intro" data-aos="zoom-out">
         Please fill in the form below to submit your complaint or service
         request. Our support team will contact you soon.
       </p>
 
-      <form className="complaint-form" onSubmit={handleSubmit}>
+      <form className="complaint-form" onSubmit={handleSubmit} data-aos="zoom-out">
         <div className="form-grid">
           <div className="form-group">
             <label>Customer Name</label>

@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <div className="main-wrapper">
       <Routes>
         {/* Default route shows all main components except Contact Us */}
         <Route
@@ -38,6 +39,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
         <Footer />
+        </div>
     </Router>
   );
 }

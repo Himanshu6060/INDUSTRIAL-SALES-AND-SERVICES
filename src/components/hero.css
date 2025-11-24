@@ -12,6 +12,9 @@
   transition: background-image 1.5s ease-in-out; /* smooth image change */
   /* padding: 0 120px  */
 }
+body html{
+  overflow-x: hidden;
+}
 
 /* Dark overlay */
 .hero::before {

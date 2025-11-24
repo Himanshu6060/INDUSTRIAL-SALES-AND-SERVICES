@@ -73,10 +73,10 @@ const ContactUs = () => {
         {/* LEFT SIDE */}
         <div className="contact-info">
           <h2>Contact Us</h2>
-          <p className="company-name">ABC Technologies Pvt. Ltd.</p>
-          <p>📍 Address: 123 Tech Park Road, New Delhi, India</p>
-          <p>📧 Email: contact@abctech.com</p>
-          <p>📞 Phone: +91 98765 43210</p>
+          <p className="company-name">Industrial Sales and Service</p>
+          <p>📍  001,Bld.06,Padmavatiestate near Bhav recidency, Datt mandil,Before Kasheli  toll naka, Bhivandi, Maharastra, 421302, India</p>
+          <p>📧 Email: issindustrialsales@gmail.com</p>
+          <p>📞 Phone: +91 9833158663 </p>
         </div>
 
         {/* RIGHT SIDE FORM */}

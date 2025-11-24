@@ -1,31 +1,36 @@
 import React from "react";
 import "./footer.css";
 import logo from "../assets/logo.png"; // put your logo at src/assets/logo.png
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Footer() {
+  useEffect(()=>{
+    AOS.init({duration:"1500"})
+  },[])
   return (
     <>
       <footer className="footer">
         <div className="footer-section company-info">
         
-          <img src={logo} alt="Company Logo" className="footer-logo" />
+          <img src={logo} alt="Company Logo" className="footer-logo" data-aos="zoom-out" />
           
-          <h3>Industrial </h3>
-          <p><strong>Sales & Service</strong></p>
-          <p>
-            Casa Treetops A 104, VGP INDUSTRIAL COMPLEX, <br />
-            50 Feet Road, Chettipedu, <br />
-            Thane, Maharastra, 424302, India
+          <h3 data-aos="fade-up">Industrial </h3>
+          <p data-aos="fade-up"><strong>Sales & Service</strong></p>
+          <p data-aos="fade-up">  001,Bld.06,Padmavatiestate near Bhav recidency, Datt mandil,Before   
+      Kasheli  toll naka<br/>
+            Bhivandi, Maharastra, 421302, India
           </p>
         </div>
 
         <div className="footer-section contact-details">
-          <h4>CONTACT DETAILS</h4>
-          <p><i className="fas fa-phone"></i> +91 84276 30847</p>
-          <p><i className="fas fa-envelope"></i> himanshukumar34407@gmail.com</p>
+          <h4 data-aos="fade-up">CONTACT DETAILS</h4>
+          <p data-aos="fade-up"><i className="fas fa-phone"></i> +91 9833158663</p>
+          <p data-aos="fade-up"><i className="fas fa-envelope"></i>issindustrialsales@gmail.com</p>
         </div>
 
-        <div className="footer-section sitemap">
+        <div className="footer-section sitemap" data-aos="fade-up">
           <h4>SITEMAP</h4>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -39,7 +44,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="footer-section legal">
+        <div className="footer-section legal" data-aos="fade-up">
           <h4>LEGAL</h4>
 
           <ul>
@@ -65,7 +70,7 @@ function Footer() {
 
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/8427630847"
+            href="https://wa.me/9833158663"
             target="_blank"
             rel="noreferrer"
             className="whatsapp-btn"
